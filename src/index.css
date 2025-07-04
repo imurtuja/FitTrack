@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import "tailwindcss";
+
+body {
+  background: linear-gradient(135deg, #181A20 0%, #23272F 100%);
+  color: #F3F3F3;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --kick-green: #53FC18;
+  --kick-bg: #181A20;
+  --kick-card: rgba(36, 39, 48, 0.85);
+  --kick-border: #23272F;
+  --kick-shadow: 0 8px 32px 0 rgba(83, 252, 24, 0.10);
+}
+
+.glass-card {
+  background: var(--kick-card);
+  box-shadow: none;
+  backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 2rem;
+  border: 2px solid var(--kick-border);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--kick-green) 0%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.kick-btn {
+  background: var(--kick-green);
+  color: #181A20;
+  font-weight: bold;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  box-shadow: none;
+  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+.kick-btn:hover {
+  background: #7CFF4C;
+  color: #181A20;
+  transform: scale(1.04);
+}
+
+.kick-sidebar {
+  background: #20232B;
+  border-right: 2px solid var(--kick-border);
+  box-shadow: none;
+}
+
+.kick-active {
+  background: var(--kick-green);
+  color: #181A20 !important;
+  font-weight: bold;
+  box-shadow: none;
+}
+
+.kick-card-title {
+  color: var(--kick-green);
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.01em;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #23272F;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--kick-green);
+  border-radius: 8px;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fade-in 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+input[type=number] {
+  -moz-appearance: textfield;
+}

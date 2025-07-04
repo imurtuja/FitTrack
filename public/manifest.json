@@ -1,0 +1,21 @@
+{
+  "name": "FitTrack",
+  "short_name": "FitTrack",
+  "description": "Track your workouts, routines, and progress with FitTrack!",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#181A20",
+  "theme_color": "#53FC18",
+  "icons": [
+    {
+      "src": "/dmbbell.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/dmbbell.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+} 
