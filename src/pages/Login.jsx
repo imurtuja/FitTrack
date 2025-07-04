@@ -130,16 +130,7 @@ export default function Login(props) {
                   <FaGoogle className="text-2xl group-hover:scale-110 transition-transform" />
                   {loading ? t('login.signingIn', 'Signing in...') : t('login.signInWithGoogle', 'Sign in with Google')}
                 </button>
-                {isProd && (
-                  <button
-                    onClick={() => handleProviderLogin(appleProvider)}
-                    disabled={loading}
-                    className="group flex items-center gap-3 bg-gradient-to-r from-[#23272F] to-[#181A20] hover:from-[#181A20] hover:to-[#23272F] text-[#fff] font-extrabold px-10 py-4 rounded-full transition-all duration-200 text-xl focus:outline-none focus:ring-4 focus:ring-[#fff]/40 w-full justify-center shadow-xl hover:scale-105 active:scale-95 animate-fade-in-up"
-                  >
-                    <FaApple className="text-2xl group-hover:scale-110 transition-transform" />
-                    {loading ? t('login.signingIn', 'Signing in...') : t('login.signInWithApple', 'Sign in with Apple')}
-                  </button>
-                )}
+                {/* Apple sign-in button removed for now */}
                 <button
                   onClick={() => setShowEmailModal(true)}
                   disabled={loading}
