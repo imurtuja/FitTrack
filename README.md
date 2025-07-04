@@ -250,6 +250,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ by [Your Name]**
+**Made with ❤️ by Murtuja**
 
 *Transform your fitness journey with Fitmint - where motivation meets technology.* 
