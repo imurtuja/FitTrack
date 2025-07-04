@@ -235,8 +235,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - **Live Demo**: [https://fitmint.vercel.app/](https://fitmint.vercel.app/)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/fitmint/issues)
-- **Email**: support@fitmint.app
 
 ## 🔮 Roadmap
 
