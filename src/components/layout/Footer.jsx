@@ -30,11 +30,11 @@ const Footer = () => {
         const lang = userDoc.exists() ? userDoc.data().language : null;
         if (lang && lang !== i18n.language) {
           i18n.changeLanguage(lang);
-          localStorage.setItem('fittrack-lang', lang);
+          localStorage.setItem('fitmint-lang', lang);
         }
       } else {
         // Not logged in, use localStorage or default
-        const lang = localStorage.getItem('fittrack-lang') || 'en';
+        const lang = localStorage.getItem('fitmint-lang') || 'en';
         if (lang !== i18n.language) {
           i18n.changeLanguage(lang);
         }
@@ -48,7 +48,7 @@ const Footer = () => {
   const handleLanguageChange = async (e) => {
     const lang = e.target.value;
     i18n.changeLanguage(lang);
-    localStorage.setItem('fittrack-lang', lang);
+    localStorage.setItem('fitmint-lang', lang);
     if (user) {
       await setDoc(doc(db, 'users', user.uid), { language: lang }, { merge: true });
     }
@@ -66,7 +66,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 px-4 md:px-10 py-3">
         {/* Left: Copyright */}
         <div className="flex-1 flex items-center justify-center md:justify-start w-full md:w-auto mb-1 md:mb-0">
-          <span>&copy; {new Date().getFullYear()} <span className="font-bold text-[#B0FFB0]">FitTrack</span>. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} <span className="font-bold text-[#B0FFB0]">Fitmint</span>. All rights reserved.</span>
         </div>
         {/* Center: Made with love */}
         <div className="flex-1 hidden md:flex items-center justify-center w-full md:w-auto opacity-90">

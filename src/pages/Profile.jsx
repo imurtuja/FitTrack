@@ -75,17 +75,17 @@ const Profile = ({ feedbackOpen, setFeedbackOpen }) => {
     return (
       <div className="min-h-screen flex items-center justify-center px-2 pt-24 pb-12 animate-fade-in">
         <Helmet>
-          <title>Profile – FitTrack by Murtuja</title>
-          <meta name="description" content="View and manage your FitTrack profile. Fitness tracker by Murtuja." />
-          <meta name="keywords" content="FitTrack, fitness tracker, profile, Murtuja, health, account" />
-          <meta property="og:title" content="Profile – FitTrack by Murtuja" />
-          <meta property="og:description" content="View and manage your FitTrack profile. Fitness tracker by Murtuja." />
+          <title>Profile – Fitmint by Murtuja</title>
+          <meta name="description" content="View and manage your Fitmint profile. Fitness tracker by Murtuja." />
+          <meta name="keywords" content="Fitmint, fitness tracker, profile, Murtuja, health, account" />
+          <meta property="og:title" content="Profile – Fitmint by Murtuja" />
+          <meta property="og:description" content="View and manage your Fitmint profile. Fitness tracker by Murtuja." />
           <meta property="og:image" content="/dmbbell.png" />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://fittrack.vercel.app/profile" />
+          <meta property="og:url" content="https://fitmint.vercel.app/profile" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Profile – FitTrack by Murtuja" />
-          <meta name="twitter:description" content="View and manage your FitTrack profile. Fitness tracker by Murtuja." />
+          <meta name="twitter:title" content="Profile – Fitmint by Murtuja" />
+          <meta name="twitter:description" content="View and manage your Fitmint profile. Fitness tracker by Murtuja." />
           <meta name="twitter:image" content="/dmbbell.png" />
         </Helmet>
         <div className="w-full max-w-5xl flex flex-col items-center gap-8 pt-4 pb-8">
@@ -107,17 +107,17 @@ const Profile = ({ feedbackOpen, setFeedbackOpen }) => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-2 pt-24 pb-12 animate-fade-in">
       <Helmet>
-        <title>Profile – FitTrack by Murtuja</title>
-        <meta name="description" content="View and manage your FitTrack profile. Fitness tracker by Murtuja." />
-        <meta name="keywords" content="FitTrack, fitness tracker, profile, Murtuja, health, account" />
-        <meta property="og:title" content="Profile – FitTrack by Murtuja" />
-        <meta property="og:description" content="View and manage your FitTrack profile. Fitness tracker by Murtuja." />
+        <title>Profile – Fitmint by Murtuja</title>
+        <meta name="description" content="View and manage your Fitmint profile. Fitness tracker by Murtuja." />
+        <meta name="keywords" content="Fitmint, fitness tracker, profile, Murtuja, health, account" />
+        <meta property="og:title" content="Profile – Fitmint by Murtuja" />
+        <meta property="og:description" content="View and manage your Fitmint profile. Fitness tracker by Murtuja." />
         <meta property="og:image" content="/dmbbell.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://fittrack.vercel.app/profile" />
+        <meta property="og:url" content="https://fitmint.vercel.app/profile" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Profile – FitTrack by Murtuja" />
-        <meta name="twitter:description" content="View and manage your FitTrack profile. Fitness tracker by Murtuja." />
+        <meta name="twitter:title" content="Profile – Fitmint by Murtuja" />
+        <meta name="twitter:description" content="View and manage your Fitmint profile. Fitness tracker by Murtuja." />
         <meta name="twitter:image" content="/dmbbell.png" />
       </Helmet>
       {/* Dashboard-style hero header block */}

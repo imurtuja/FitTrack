@@ -13,8 +13,8 @@ const Navbar = () => {
   return (
     <nav className="w-full fixed top-0 left-0 z-50 flex items-center justify-between px-4 md:px-10 py-2 md:py-3 glass-card bg-[#181A20]/80 backdrop-blur-lg border-b border-[#23272F]/60 shadow-lg" aria-label="Main navigation">
       <Link to="/dashboard" className="flex items-center gap-2 select-none">
-        <img src="/dmbbell.svg" alt="FitTrack Logo" className="w-10 h-10 md:w-12 md:h-12 drop-shadow-lg" />
-        <span className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[var(--kick-green)] via-[#B0FFB0] to-[var(--kick-green)] bg-clip-text text-transparent tracking-tight drop-shadow-lg">FitTrack</span>
+        <img src="/dmbbell.svg" alt="Fitmint Logo" className="w-10 h-10 md:w-12 md:h-12 drop-shadow-lg" />
+        <span className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[var(--kick-green)] via-[#B0FFB0] to-[var(--kick-green)] bg-clip-text text-transparent tracking-tight drop-shadow-lg">Fitmint</span>
         </Link>
       <div className="flex items-center gap-3">
         {user && (

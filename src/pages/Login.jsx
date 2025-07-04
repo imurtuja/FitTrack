@@ -91,17 +91,17 @@ export default function Login(props) {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#181A20] via-[#23272F] to-[#181A20] relative overflow-x-hidden animate-fade-in">
       <Helmet>
-        <title>Login – FitTrack by Murtuja</title>
-        <meta name="description" content="Login to FitTrack by Murtuja. Secure, modern fitness tracker for your workouts and progress." />
-        <meta name="keywords" content="FitTrack, fitness tracker, login, Murtuja, health, authentication" />
-        <meta property="og:title" content="Login – FitTrack by Murtuja" />
-        <meta property="og:description" content="Login to FitTrack by Murtuja. Secure, modern fitness tracker for your workouts and progress." />
+        <title>Login – Fitmint by Murtuja</title>
+        <meta name="description" content="Login to Fitmint by Murtuja. Secure, modern fitness tracker for your workouts and progress." />
+        <meta name="keywords" content="Fitmint, fitness tracker, login, Murtuja, health, authentication" />
+        <meta property="og:title" content="Login – Fitmint by Murtuja" />
+        <meta property="og:description" content="Login to Fitmint by Murtuja. Secure, modern fitness tracker for your workouts and progress." />
         <meta property="og:image" content="/dmbbell.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://fittrack.vercel.app/login" />
+        <meta property="og:url" content="https://fitmint.vercel.app/login" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Login – FitTrack by Murtuja" />
-        <meta name="twitter:description" content="Login to FitTrack by Murtuja. Secure, modern fitness tracker for your workouts and progress." />
+        <meta name="twitter:title" content="Login – Fitmint by Murtuja" />
+        <meta name="twitter:description" content="Login to Fitmint by Murtuja. Secure, modern fitness tracker for your workouts and progress." />
         <meta name="twitter:image" content="/dmbbell.png" />
       </Helmet>
       <Navbar />

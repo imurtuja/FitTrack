@@ -167,7 +167,7 @@ const RightSidebar = () => {
             </span>
             {/* Confetti at 100% */}
             {total > 0 && completed === total && (
-              <img src="https://cdn.jsdelivr.net/gh/fittrack-assets/confetti.gif" alt="Confetti" className="absolute w-32 h-32 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10" style={{opacity: 0.9}} onError={e => e.currentTarget.style.display = 'none'} />
+              <img src="https://cdn.jsdelivr.net/gh/fitmint-assets/confetti.gif" alt="Confetti" className="absolute w-32 h-32 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10" style={{opacity: 0.9}} onError={e => e.currentTarget.style.display = 'none'} />
             )}
           </div>
           <div className="flex flex-col items-center gap-1">

@@ -1,7 +1,7 @@
 {
-  "name": "FitTrack",
-  "short_name": "FitTrack",
-  "description": "Track your workouts, routines, and progress with FitTrack!",
+  "name": "Fitmint",
+  "short_name": "Fitmint",
+  "description": "Track your workouts, routines, and progress with Fitmint!",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#181A20",

@@ -147,17 +147,17 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen px-2 pt-24 pb-24 flex flex-col items-center ">
       <Helmet>
-        <title>Dashboard – FitTrack by Murtuja</title>
-        <meta name="description" content="Your personalized fitness dashboard. Track your workouts, progress, and motivation with FitTrack by Murtuja." />
-        <meta name="keywords" content="FitTrack, fitness tracker, workout, dashboard, Murtuja, progress, motivation, exercise, health" />
-        <meta property="og:title" content="Dashboard – FitTrack by Murtuja" />
-        <meta property="og:description" content="Your personalized fitness dashboard. Track your workouts, progress, and motivation with FitTrack by Murtuja." />
+        <title>Dashboard – Fitmint by Murtuja</title>
+        <meta name="description" content="Your personalized fitness dashboard. Track your workouts, progress, and motivation with Fitmint by Murtuja." />
+        <meta name="keywords" content="Fitmint, fitness tracker, workout, dashboard, Murtuja, progress, motivation, exercise, health" />
+        <meta property="og:title" content="Dashboard – Fitmint by Murtuja" />
+        <meta property="og:description" content="Your personalized fitness dashboard. Track your workouts, progress, and motivation with Fitmint by Murtuja." />
         <meta property="og:image" content="/dmbbell.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://fittrack.vercel.app/dashboard" />
+        <meta property="og:url" content="https://fitmint.vercel.app/dashboard" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Dashboard – FitTrack by Murtuja" />
-        <meta name="twitter:description" content="Your personalized fitness dashboard. Track your workouts, progress, and motivation with FitTrack by Murtuja." />
+        <meta name="twitter:title" content="Dashboard – Fitmint by Murtuja" />
+        <meta name="twitter:description" content="Your personalized fitness dashboard. Track your workouts, progress, and motivation with Fitmint by Murtuja." />
         <meta name="twitter:image" content="/dmbbell.png" />
       </Helmet>
       {/* Professional header block */}
@@ -298,12 +298,6 @@ export default function Dashboard() {
         <FaQuoteLeft className="text-[var(--kick-green)] text-2xl mb-2 animate-quote-fade" />
         <span className="text-lg text-[#B0FFB0] text-center animate-quote-fade" key={quote}>{`"${quote}"`}</span>
       </div>
-      {/* Confetti animation overlay */}
-      {showConfetti && (
-        <div className="fixed inset-0 z-50 pointer-events-none flex items-center justify-center animate-fade-in">
-          <img src="https://cdn.jsdelivr.net/gh/fittrack-assets/confetti.gif" alt="Confetti" className="w-full h-full object-cover opacity-80" />
-        </div>
-      )}
     </div>
   );
 }

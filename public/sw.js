@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fittrack-cache-v1';
+const CACHE_NAME = 'fitmint-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',

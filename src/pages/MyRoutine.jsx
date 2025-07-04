@@ -59,7 +59,7 @@ function routineToPDF(routine) {
   // For simplicity, skip logo if conversion is not trivial in browser
   doc.setFontSize(22);
   doc.setTextColor('#53FC18');
-  doc.text('FitTrack', 18, 18);
+  doc.text('Fitmint', 18, 18);
   doc.setFontSize(14);
   doc.setTextColor('#23272F');
   doc.text('Workout Routine', 18, 28);
@@ -113,9 +113,9 @@ function routineToPDF(routine) {
     doc.setPage(i);
     doc.setFontSize(10);
     doc.setTextColor('#B0FFB0');
-    doc.text(`Page ${i} of ${pageCount} | FitTrack`, 105, 290, { align: 'center' });
+    doc.text(`Page ${i} of ${pageCount} | Fitmint`, 105, 290, { align: 'center' });
   }
-  doc.save('fittrack-workout-routine.pdf');
+  doc.save('fitmint-workout-routine.pdf');
 }
 
 // Two FABs: Add Workout and Actions (with animated circular menu)
@@ -202,13 +202,13 @@ export default function MyRoutine() {
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const modalRef = useRef();
-  const fileInputRef = useRef();
   const [modal, setModal] = useState({ open: false, action: null, message: '', onConfirm: null });
   const [editingNote, setEditingNote] = useState(false);
   const [noteDraft, setNoteDraft] = useState(note);
   const [deleteIdx, setDeleteIdx] = useState(null);
   const [undoData, setUndoData] = useState(null);
   const [progress, setProgress] = useState(0);
+  const fileInputRef = useRef();
 
   // Load full 7-day routine from Firestore
   useEffect(() => {
@@ -357,7 +357,7 @@ export default function MyRoutine() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'fittrack-workout-template.csv';
+      a.download = 'fitmint-workout-template.csv';
       a.click();
       URL.revokeObjectURL(url);
     } else if (format === 'pdf') {
@@ -368,7 +368,7 @@ export default function MyRoutine() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'fittrack-workout-template.json';
+      a.download = 'fitmint-workout-template.json';
       a.click();
       URL.revokeObjectURL(url);
     }
@@ -386,7 +386,7 @@ export default function MyRoutine() {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'fittrack-workout-routine.csv';
+        a.download = 'fitmint-workout-routine.csv';
         a.click();
         URL.revokeObjectURL(url);
         toast.success('Workout routine exported as CSV!');
@@ -421,7 +421,7 @@ export default function MyRoutine() {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'fittrack-workout-routine.json';
+        a.download = 'fitmint-workout-routine.json';
         a.click();
         URL.revokeObjectURL(url);
         toast.success('Workout routine exported as JSON!');
@@ -483,17 +483,17 @@ export default function MyRoutine() {
   return (
     <div className="min-h-screen px-2 pt-24 pb-24 flex flex-col items-center ">
       <Helmet>
-        <title>My Routine – FitTrack by Murtuja</title>
-        <meta name="description" content="Plan and manage your weekly workout routine with FitTrack by Murtuja. Fitness tracker for your daily progress." />
-        <meta name="keywords" content="FitTrack, fitness tracker, workout routine, Murtuja, health, plan, schedule" />
-        <meta property="og:title" content="My Routine – FitTrack by Murtuja" />
-        <meta property="og:description" content="Plan and manage your weekly workout routine with FitTrack by Murtuja. Fitness tracker for your daily progress." />
+        <title>My Routine – Fitmint by Murtuja</title>
+        <meta name="description" content="Plan and manage your weekly workout routine with Fitmint by Murtuja. Fitness tracker for your daily progress." />
+        <meta name="keywords" content="Fitmint, fitness tracker, workout routine, Murtuja, health, plan, schedule" />
+        <meta property="og:title" content="My Routine – Fitmint by Murtuja" />
+        <meta property="og:description" content="Plan and manage your weekly workout routine with Fitmint by Murtuja. Fitness tracker for your daily progress." />
         <meta property="og:image" content="/dmbbell.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://fittrack.vercel.app/my-routine" />
+        <meta property="og:url" content="https://fitmint.vercel.app/my-routine" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="My Routine – FitTrack by Murtuja" />
-        <meta name="twitter:description" content="Plan and manage your weekly workout routine with FitTrack by Murtuja. Fitness tracker for your daily progress." />
+        <meta name="twitter:title" content="My Routine – Fitmint by Murtuja" />
+        <meta name="twitter:description" content="Plan and manage your weekly workout routine with Fitmint by Murtuja. Fitness tracker for your daily progress." />
         <meta name="twitter:image" content="/dmbbell.png" />
       </Helmet>
       {/* Dashboard-style hero header block */}

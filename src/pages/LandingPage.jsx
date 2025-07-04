@@ -14,15 +14,15 @@ export default function LandingPage(props) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#181A20] via-[#23272F] to-[#181A20] px-4 py-8 relative overflow-x-hidden">
       <Helmet>
-        <title>FitTrack – Track. Motivate. Achieve.</title>
+        <title>Fitmint – Track. Motivate. Achieve.</title>
         <meta name="description" content="Smash your goals with a modern, powerful fitness tracker. Plan your workouts, stay motivated, and see your progress—anywhere, anytime." />
-        <meta property="og:title" content="FitTrack – Track. Motivate. Achieve." />
+        <meta property="og:title" content="Fitmint – Track. Motivate. Achieve." />
         <meta property="og:description" content="Smash your goals with a modern, powerful fitness tracker. Plan your workouts, stay motivated, and see your progress—anywhere, anytime." />
         <meta property="og:image" content="/dmbbell.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://fittrack.vercel.app/" />
+        <meta property="og:url" content="https://fitmint.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="FitTrack – Track. Motivate. Achieve." />
+        <meta name="twitter:title" content="Fitmint – Track. Motivate. Achieve." />
         <meta name="twitter:description" content="Smash your goals with a modern, powerful fitness tracker. Plan your workouts, stay motivated, and see your progress—anywhere, anytime." />
         <meta name="twitter:image" content="/dmbbell.png" />
       </Helmet>
@@ -31,8 +31,8 @@ export default function LandingPage(props) {
       <div className="absolute top-1/2 right-0 w-[300px] h-[300px] bg-[#53FC18]/30 opacity-10 rounded-full blur-2xl z-0 animate-pulse" />
       {/* Logo & App Name */}
       <header className="flex items-center gap-3 mb-8 select-none z-10">
-        <img src="/dmbbell.svg" alt="FitTrack Logo" className="w-12 h-12 md:w-16 md:h-16 drop-shadow-lg" />
-        <span className="text-4xl font-extrabold text-[var(--kick-green)] drop-shadow-lg tracking-tight">FitTrack</span>
+        <img src="/dmbbell.svg" alt="Fitmint Logo" className="w-12 h-12 md:w-16 md:h-16 drop-shadow-lg" />
+        <span className="text-4xl font-extrabold text-[var(--kick-green)] drop-shadow-lg tracking-tight">Fitmint</span>
       </header>
       <main>
         {/* Hero Section */}
