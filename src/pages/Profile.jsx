@@ -186,11 +186,10 @@ const Profile = ({ feedbackOpen, setFeedbackOpen }) => {
       {/* Floating Feedback Button (bottom right, only on Profile) */}
       <button
         onClick={() => setFeedbackOpen(true)}
-        className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-[var(--kick-green)] to-[#53FC18] text-[#181A20] font-extrabold rounded-full px-6 py-4 text-lg shadow-2xl hover:scale-105 active:scale-95 transition-transform focus:outline-none focus:ring-4 focus:ring-[var(--kick-green)]/40 flex items-center gap-2"
+        className="fixed bottom-24 md:bottom-8 right-8 z-[60] bg-gradient-to-r from-[var(--kick-green)] to-[#53FC18] text-[#181A20] font-extrabold rounded-full px-6 py-4 text-lg shadow-2xl hover:scale-105 active:scale-95 transition-transform focus:outline-none focus:ring-4 focus:ring-[var(--kick-green)]/40 flex items-center gap-2"
         aria-label="Send Feedback"
       >
-        <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 21l1.8-4A7.97 7.97 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-        Feedback
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 21l1.8-4A7.97 7.97 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
       </button>
     </div>
   );

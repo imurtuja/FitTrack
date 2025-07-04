@@ -211,7 +211,7 @@ export default function Dashboard() {
         <div className="block md:hidden mb-3">
           <div className="flex flex-col items-center justify-center">
             <div className="relative w-24 h-24 flex items-center justify-center mb-2">
-              <svg className="absolute top-0 left-0" width="96" height="96">
+              <svg className="absolute top-0 left-0 z-0" width="96" height="96" style={percent === 100 ? { filter: 'drop-shadow(0 0 16px #53FC18)' } : {}}>
                 <circle cx="48" cy="48" r="40" stroke="#23272F" strokeWidth="10" fill="none" />
                 <circle
                   cx="48" cy="48" r="40"
@@ -222,7 +222,7 @@ export default function Dashboard() {
                   strokeDashoffset={2 * Math.PI * 40 * (1 - percent / 100)}
                   strokeLinecap="round"
                   transform="rotate(-90 48 48)"
-                    style={{ transition: 'stroke-dashoffset 0.6s cubic-bezier(.4,2,.6,1)', stroke: percent === 0 ? '#53FC18' : undefined, filter: percent === 100 ? 'drop-shadow(0 0 12px #53FC18)' : undefined }}
+                  style={{ transition: 'stroke-dashoffset 0.6s cubic-bezier(.4,2,.6,1)', stroke: percent === 0 ? '#53FC18' : undefined }}
                 />
                 <defs>
                   <linearGradient id="kickGreenMobile" x1="0" y1="0" x2="1" y2="1">
@@ -231,7 +231,7 @@ export default function Dashboard() {
                   </linearGradient>
                 </defs>
               </svg>
-                <span className={`absolute text-3xl font-extrabold ${percent === 100 ? 'text-[var(--kick-green)] drop-shadow-[0_0_8px_#53FC18]' : 'text-[var(--kick-green)]'}`}>{Math.round(percent)}%</span>
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-[var(--kick-green)]" style={percent === 100 ? { textShadow: '0 0 8px #53FC18' } : {}}>{Math.round(percent)}%</span>
             </div>
             <div className="flex flex-col items-center gap-0.5">
               <span className="text-lg font-bold text-[#B0FFB0]">{t('{{completed}} of {{tasks}} completed', {completed: completed.length, tasks: tasks.length})}</span>

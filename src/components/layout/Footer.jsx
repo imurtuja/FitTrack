@@ -56,7 +56,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="w-full z-30 bg-gradient-to-r from-[#181A20]/80 via-[#23272F]/80 to-[#181A20]/80 backdrop-blur-lg border-t border-[#23272F]/60 shadow-lg text-[#B0FFB0] text-xs md:text-sm"
+      className="w-full z-30 bg-gradient-to-r from-[#181A20]/80 via-[#23272F]/80 to-[#181A20]/80 backdrop-blur-lg border-t border-[#23272F]/60 shadow-lg text-[#B0FFB0] text-xs md:text-sm pb-20 md:pb-3"
       style={{
         boxShadow: '0 4px 32px 0 rgba(0,0,0,0.25)',
         WebkitBackdropFilter: 'blur(8px)',
@@ -69,7 +69,7 @@ const Footer = () => {
           <span>&copy; {new Date().getFullYear()} <span className="font-bold text-[#B0FFB0]">Fitmint</span>. All rights reserved.</span>
         </div>
         {/* Center: Made with love */}
-        <div className="flex-1 hidden md:flex items-center justify-center w-full md:w-auto opacity-90">
+        <div className="flex-1 flex items-center justify-center w-full md:w-auto opacity-90">
           <span className="flex items-center gap-1">
             Made with <FaHeart className="text-red-400 inline-block animate-pulse" aria-label="love" /> by <span className="font-semibold">Murtuja</span>
           </span>
