@@ -546,9 +546,20 @@ export default function MyRoutine() {
             )}
           </div>
           {/* Section title for day */}
-          <div className="flex items-center gap-2 mb-4">
-            <FaCalendar className="text-2xl text-[var(--kick-green)]" />
-            <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--kick-green)] tracking-tight">{selectedDay} Workouts</h2>
+          <div className="flex items-center gap-2 mb-4 justify-between">
+            <div className="flex items-center gap-2">
+              <FaCalendar className="text-2xl text-[var(--kick-green)]" />
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--kick-green)] tracking-tight">{selectedDay} Workouts</h2>
+            </div>
+            <button
+              onClick={() => openModal()}
+              className="bg-gradient-to-r from-[var(--kick-green)] to-[#53FC18] text-[#181A20] font-extrabold rounded-full shadow-xl p-0 w-12 h-12 flex items-center justify-center text-3xl hover:scale-110 active:scale-95 transition-transform focus:outline-none focus:ring-4 focus:ring-[var(--kick-green)]/40"
+              aria-label="Add Workout"
+              style={{ boxShadow: '0 4px 16px 0 rgba(83,252,24,0.18)' }}
+            >
+              <span className="sr-only">Add Workout</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
           </div>
           {/* Section divider */}
           <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#B0FFB0]/30 to-transparent my-2 rounded-full" />
