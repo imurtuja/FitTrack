@@ -10,10 +10,11 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
-if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(err => {
-      console.error('Service worker registration failed:', err);
-    });
-  });
-}
+// Temporarily disabled service worker to fix MIME type issues
+// if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+//   window.addEventListener('load', () => {
+//     navigator.serviceWorker.register('/sw.js').catch(err => {
+//       console.error('Service worker registration failed:', err);
+//     });
+//   });
+// }

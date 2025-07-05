@@ -11,4 +11,14 @@ export default defineConfig({
       config: path.resolve(__dirname, 'tailwind.config.js'),
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
+  server: {
+    port: 3000,
+  },
 })
