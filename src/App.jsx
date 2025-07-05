@@ -54,18 +54,12 @@ function AuthProvider({ children }) {
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
-  if (loading) return null;
+  if (loading) return <Spinner />;
   return user ? children : <Navigate to="/" replace />;
 }
 
 // Import CSS
 import './App.css'
-
-function AuthLoaderWrapper({ children }) {
-  const { loading } = useAuth();
-  if (loading) return <Spinner />;
-  return children;
-}
 
 function App() {
   const [feedbackOpen, setFeedbackOpen] = useState(false);
@@ -73,37 +67,137 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <AuthProvider>
-          <AuthLoaderWrapper>
-    <Router>
-              <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/" element={<LandingPage />} />
-                <Route
-                  path="/*"
-                  element={
-                    <ProtectedRoute>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-                          <Route path="/profile" element={<Profile feedbackOpen={feedbackOpen} setFeedbackOpen={setFeedbackOpen} />} />
-          <Route path="/notes" element={<div className="p-4"><h1 className="text-2xl font-bold">Notes Page</h1><p className="mt-4">This page is under construction.</p></div>} />
-          <Route path="/progress" element={<div className="p-4"><h1 className="text-2xl font-bold">Progress Page</h1><p className="mt-4">This page is under construction.</p></div>} />
-          <Route path="/calendar" element={<div className="p-4"><h1 className="text-2xl font-bold">Calendar Page</h1><p className="mt-4">This page is under construction.</p></div>} />
-          <Route path="/routines" element={<div className="p-4"><h1 className="text-2xl font-bold">Routines Page</h1><p className="mt-4">This page is under construction.</p></div>} />
-          <Route path="/diet" element={<div className="p-4"><h1 className="text-2xl font-bold">Diet Page</h1><p className="mt-4">This page is under construction.</p></div>} />
-          <Route path="/settings" element={<div className="p-4"><h1 className="text-2xl font-bold">Settings Page</h1><p className="mt-4">This page is under construction.</p></div>} />
-                          <Route path="/my-routine" element={<MyRoutine />} />
-                          <Route path="*" element={<NotFound />} />
-        </Routes>
-                        <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
-      </Layout>
-                    </ProtectedRoute>
-                  }
-                />
-              </Routes>
-    </Router>
-          </AuthLoaderWrapper>
+          <Router>
+            <Routes>
+              {/* Public routes */}
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/login" element={<Login />} />
+              
+              {/* Protected routes with Layout */}
+              <Route
+                path="/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <Layout>
+                      <Dashboard />
+                      <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+                    </Layout>
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <Layout>
+                      <Profile feedbackOpen={feedbackOpen} setFeedbackOpen={setFeedbackOpen} />
+                      <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+                    </Layout>
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/my-routine"
+                element={
+                  <ProtectedRoute>
+                    <Layout>
+                      <MyRoutine />
+                      <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+                    </Layout>
+                  </ProtectedRoute>
+                }
+              />
+              
+              {/* Placeholder routes */}
+              <Route
+                path="/notes"
+                element={
+                  <ProtectedRoute>
+                    <Layout>
+                      <div className="p-4">
+                        <h1 className="text-2xl font-bold">Notes Page</h1>
+                        <p className="mt-4">This page is under construction.</p>
+                      </div>
+                      <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+                    </Layout>
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/progress"
+                element={
+                  <ProtectedRoute>
+                    <Layout>
+                      <div className="p-4">
+                        <h1 className="text-2xl font-bold">Progress Page</h1>
+                        <p className="mt-4">This page is under construction.</p>
+                      </div>
+                      <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+                    </Layout>
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/calendar"
+                element={
+                  <ProtectedRoute>
+                    <Layout>
+                      <div className="p-4">
+                        <h1 className="text-2xl font-bold">Calendar Page</h1>
+                        <p className="mt-4">This page is under construction.</p>
+                      </div>
+                      <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+                    </Layout>
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/routines"
+                element={
+                  <ProtectedRoute>
+                    <Layout>
+                      <div className="p-4">
+                        <h1 className="text-2xl font-bold">Routines Page</h1>
+                        <p className="mt-4">This page is under construction.</p>
+                      </div>
+                      <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+                    </Layout>
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/diet"
+                element={
+                  <ProtectedRoute>
+                    <Layout>
+                      <div className="p-4">
+                        <h1 className="text-2xl font-bold">Diet Page</h1>
+                        <p className="mt-4">This page is under construction.</p>
+                      </div>
+                      <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+                    </Layout>
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/settings"
+                element={
+                  <ProtectedRoute>
+                    <Layout>
+                      <div className="p-4">
+                        <h1 className="text-2xl font-bold">Settings Page</h1>
+                        <p className="mt-4">This page is under construction.</p>
+                      </div>
+                      <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+                    </Layout>
+                  </ProtectedRoute>
+                }
+              />
+              
+              {/* Catch all route */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Router>
         </AuthProvider>
       </ErrorBoundary>
     </HelmetProvider>
